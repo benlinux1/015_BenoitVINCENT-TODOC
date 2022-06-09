@@ -7,7 +7,6 @@ import androidx.room.Room;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-
 import com.cleanup.todoc.database.dao.TodocDatabase;
 import com.cleanup.todoc.model.Task;
 
@@ -47,7 +46,8 @@ public class TaskDaoTest {
 
 
     // DATA SET FOR TEST
-    private static final Task TASK_DEMO = new Task( 1, "Nettoyer les vitres de la salle de réunion", 1654684380);
+    private static final long TASK_ID = 5;
+    private static final Task TASK_DEMO = new Task(TASK_ID, 1, "Nettoyer les vitres de la salle de réunion", 1654684380);
 
     @Test
     public void insertAndGetTask() throws InterruptedException {
@@ -56,8 +56,8 @@ public class TaskDaoTest {
         this.database.taskDao().createTask(TASK_DEMO);
 
         // TEST : check if task data is in the database
-        Task task = LiveDataTestUtil.getValue(this.database.taskDao().getTask(1));
-        assertTrue(task.getName().equals(TASK_DEMO.getName()) && task.getId() == TASK_DEMO.getId()
+        Task task = LiveDataTestUtil.getValue(this.database.taskDao().getTask(TASK_ID));
+        assertTrue(task.getName().equals(TASK_DEMO.getName()) && task.getId() == TASK_ID
                 && task.getProjectId() == TASK_DEMO.getProjectId() && task.getCreationTimestamp() == TASK_DEMO.getCreationTimestamp());
 
     }

@@ -49,10 +49,10 @@ public abstract class TodocDatabase extends RoomDatabase {
             public void onCreate(@NonNull SupportSQLiteDatabase db) {
 
                 super.onCreate(db);
-                Executors.newSingleThreadExecutor().execute(() -> INSTANCE.taskDao().createTask(new Task( 1, "Nettoyer les vitres de la salle de réunion", 1654684380)));
-                Executors.newSingleThreadExecutor().execute(() -> INSTANCE.taskDao().createTask(new Task( 2, "Nettoyer la porte d'entrée du local", 1654684390)));
-                Executors.newSingleThreadExecutor().execute(() -> INSTANCE.taskDao().createTask(new Task( 3, "Nettoyer le réfrigérateur de la salle de pause", 1654684400)));
-                Executors.newSingleThreadExecutor().execute(() -> INSTANCE.taskDao().createTask(new Task( 1, "Nettoyer le réfrigérateur de la cuisine", 1654684410)));
+                // Executors.newSingleThreadExecutor().execute(() -> INSTANCE.taskDao().createTask(new Task( 1, "Nettoyer les vitres de la salle de réunion", 1654684380)));
+                // Executors.newSingleThreadExecutor().execute(() -> INSTANCE.taskDao().createTask(new Task( 2, "Nettoyer la porte d'entrée du local", 1654684390)));
+                // Executors.newSingleThreadExecutor().execute(() -> INSTANCE.taskDao().createTask(new Task( 3, "Nettoyer le réfrigérateur de la salle de pause", 1654684400)));
+                // Executors.newSingleThreadExecutor().execute(() -> INSTANCE.taskDao().createTask(new Task( 1, "Nettoyer le réfrigérateur de la cuisine", 1654684410)));
             }
         };
     }
