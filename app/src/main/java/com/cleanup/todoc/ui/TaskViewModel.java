@@ -3,24 +3,29 @@ package com.cleanup.todoc.ui;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.cleanup.todoc.model.Project;
 import com.cleanup.todoc.model.Task;
+import com.cleanup.todoc.repositories.ProjectDataRepository;
 import com.cleanup.todoc.repositories.TaskDataRepository;
 
 import java.util.List;
 import java.util.concurrent.Executor;
 
-public class TaskViewModel  extends ViewModel {
+public class TaskViewModel extends ViewModel {
 
     private LiveData<List<Task>> currentTasks;
 
     // REPOSITORIES
     private final TaskDataRepository taskDataSource;
+    private final ProjectDataRepository projectDataSource;
     private final Executor executor;
 
+
     // DATA
-    public TaskViewModel(TaskDataRepository taskDataSource, Executor executor) {
+    public TaskViewModel(TaskDataRepository taskDataSource, ProjectDataRepository projectDataSource, Executor executor) {
 
         this.taskDataSource = taskDataSource;
+        this.projectDataSource = projectDataSource;
         this.executor = executor;
     }
 
@@ -35,10 +40,25 @@ public class TaskViewModel  extends ViewModel {
 
     }
 
+    // -------------
+    // / GET PROJECTS LIST
+    // -------------
+
+    public LiveData<List<Project>> getProjects() {
+        return projectDataSource.getProjects();
+    }
+
 
     // GET TASKS LIST
     public LiveData<List<Task>> getTasks() {
         return taskDataSource.getTasks();
+    }
+
+
+
+    // GET A GIVEN PROJECT BY ID
+    public LiveData<Project> getProject(long id) {
+        return projectDataSource.getProject(id);
     }
 
     // CREATE A NEW TASK

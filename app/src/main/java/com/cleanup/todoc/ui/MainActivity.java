@@ -15,6 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -36,10 +38,7 @@ import java.util.List;
  * @author Gaëtan HERFRAY
  */
 public class MainActivity extends AppCompatActivity implements TasksAdapter.DeleteTaskListener {
-    /**
-     * List of all projects available in the application
-     */
-    private final Project[] allProjects = Project.getAllProjects();
+
 
     /**
      * List of all current tasks of the application
@@ -118,6 +117,8 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
         // Configure ViewModel & get tasks list
         configureViewModel();
         getTasks();
+        getProjects();
+
     }
 
     @Override
@@ -146,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
         return super.onOptionsItemSelected(item);
     }
 
-    // Configuring ViewModelfrom ViewModelFactory
+    // Configuring ViewModel from ViewModelFactory
     private void configureViewModel() {
 
         this.taskViewModel = new ViewModelProvider(this, ViewModelFactory.getInstance(this)).get(TaskViewModel.class);
@@ -156,6 +157,15 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
     // 3 - Get all tasks from database with update context according to filters
     private void getTasks() {
         taskViewModel.getTasks().observe(this, this::updateTasks);
+    }
+
+
+    /**
+     * TODO : Used to get projects List stored in Database
+     * @return List<Project>
+     */
+    private void getProjects() {
+        taskViewModel.getProjects().observe(this, this::updateProjects);
     }
     
 
@@ -262,7 +272,12 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
         }
     }
 
-    
+
+    private void updateProjects(List<Project> projects){
+        adapter.updateProjects(projects);
+    }
+
+
 
     /**
      * Returns the dialog allowing the user to create a new task.
@@ -311,12 +326,22 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
      * Sets the data of the Spinner with projects to associate to a new task
      */
     private void populateDialogSpinner() {
-        final ArrayAdapter<Project> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, allProjects);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        if (dialogSpinner != null) {
-            dialogSpinner.setAdapter(adapter);
-        }
+        final Observer<List<Project>> projectObserver = new Observer<List<Project>>() {
+            @Override
+            public void onChanged(@Nullable final List<Project> projects) {
+                if (projects != null) {
+                    final ArrayAdapter<Project> adapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_spinner_item, projects);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    if (dialogSpinner != null) {
+                        dialogSpinner.setAdapter(adapter);
+                    }
+                }
+                taskViewModel.getProjects().removeObserver(this);
+            }
+        };
+        taskViewModel.getProjects().observe(this, projectObserver);
     }
+
 
     /**
      * List of all possible sort methods for task

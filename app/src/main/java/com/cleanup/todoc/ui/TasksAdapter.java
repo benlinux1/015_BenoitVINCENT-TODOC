@@ -11,6 +11,7 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.cleanup.todoc.R;
+import com.cleanup.todoc.database.dao.ProjectDao;
 import com.cleanup.todoc.model.Project;
 import com.cleanup.todoc.model.Task;
 
@@ -22,11 +23,18 @@ import java.util.List;
  * @author Gaëtan HERFRAY
  */
 public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TaskViewHolder> {
+
     /**
      * The list of tasks the adapter deals with
      */
     @NonNull
     private List<Task> tasks;
+
+    /**
+     * The list of projects the adapter deals with
+     */
+    @NonNull
+    private List<Project> projects;
 
     /**
      * The listener for when a task needs to be deleted
@@ -51,6 +59,16 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TaskViewHold
      */
     void updateTasks(@NonNull final List<Task> tasks) {
         this.tasks = tasks;
+        notifyDataSetChanged();
+    }
+
+    /**
+     * Updates the list of projects the adapter deals with.
+     *
+     * @param projects the list of projects the adapter deals with to set
+     */
+    void updateProjects(@NonNull final List<Project> projects) {
+        this.projects = projects;
         notifyDataSetChanged();
     }
 
@@ -142,6 +160,20 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TaskViewHold
         }
 
         /**
+         * Get Project informations according to the ProjectId set in the given task
+         * @param task
+         * @param projects
+         * @return
+         */
+        Project getTaskProject (Task task, List<Project> projects){
+            for(Project project : projects){
+                if(project.getId() == task.getProjectId())
+                    return project;
+            }
+            return null;
+        }
+
+        /**
          * Binds a task to the item view.
          *
          * @param task the task to bind in the item view
@@ -150,7 +182,9 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TaskViewHold
             lblTaskName.setText(task.getName());
             imgDelete.setTag(task);
 
-            final Project taskProject = task.getProject();
+            // get project informations thanks to getTaskProject function
+            final Project taskProject = getTaskProject(task, projects);
+
             if (taskProject != null) {
                 imgProject.setSupportImageTintList(ColorStateList.valueOf(taskProject.getColor()));
                 lblProjectName.setText(taskProject.getName());
@@ -158,7 +192,6 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TaskViewHold
                 imgProject.setVisibility(View.INVISIBLE);
                 lblProjectName.setText("");
             }
-
         }
     }
 }

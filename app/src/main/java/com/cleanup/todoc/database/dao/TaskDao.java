@@ -29,7 +29,7 @@ public interface TaskDao {
     @Query("SELECT * FROM Task WHERE projectId = :projectId")
     LiveData<List<Task>> getTasksByProjectId(long projectId);
 
-    // Gets task with cursor for a given project
+    // Gets tasks with cursor for a given project
     @Query("SELECT * FROM Task WHERE projectId = :projectId")
     Cursor getTasksWithCursor(long projectId);
 
