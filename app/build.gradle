@@ -1,14 +1,6 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        debug {
-            keyPassword 'Marie1208'
-            storeFile file('C:\\Users\\ops14\\Desktop\\FORMATION OCR\\2 -ANDROID\\APK_KEY_TODOC\\keystore.jks')
-            storePassword 'Marie1208'
-            keyAlias 'todocKey'
-        }
-    }
     compileSdkVersion 32
     defaultConfig {
         applicationId "com.cleanup.todoc"
