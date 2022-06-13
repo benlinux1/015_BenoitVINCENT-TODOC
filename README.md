@@ -50,14 +50,14 @@ Cette applcation vous permet de/d' :
 
 L'application a été testée par émulation sur les appareils suivants :
 
-*Smartphones* :
+**Smartphones** :
 
 - Pixel 3XL (API 30)
 - Pixel 5 (API 30)
 - Nexus 6 (API 30)
 - Nexus S (API 30)
 
-*Tablettes* :
+**Tablettes** :
 
 - Nexus 9 (API 30)
 - Nexus 10 (API 30)
@@ -113,11 +113,6 @@ Then, launch app clicking on the green triangle button "Run", like in this examp
 
 This app allow you to :
 
-- Afficher la liste des tâches planifiées parmi les 3 projets en cours, chaque projet étant identifiable par une couleur unique.
-- Ajouter une nouvelle tâche, après l'avoir assignée à l'un des 3 projets existants.
-- Supprimer la/les tâches de votre choix, dans la liste générale.
-- Trier les tâches dans la liste générale, par ordre alphabétique (ou inversement) ou par date de création (chronologiquement ou de la plus récente à la plus ancienne).
-
 - Display global tasks list
 - Add a new task, after you hav assigned it to one of three existing projects.
 - Delete a task from global list
@@ -129,14 +124,14 @@ This app allow you to :
 
 This app has been tested on following devices :
 
-*Smartphones* :
+**Smartphones** :
 
 - Pixel 3XL (API 30)
 - Pixel 5 (API 30)
 - Nexus 6 (API 30)
 - Nexus S (API 30)
 
-*Tabs* :
+**Tabs** :
 
 - Nexus 9 (API 30)
 - Nexus 10 (API 30)
