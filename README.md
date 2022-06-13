@@ -46,6 +46,14 @@ Cette applcation vous permet de/d' :
 
 ![Fonctionnalités FR](https://user-images.githubusercontent.com/78255467/173392991-e153774d-e9ca-4953-88d4-c8ce81fc9f17.png)
 
+## Architecture Components & persistence des données
+
+L'application adopte l'Architecture Components et gère la persistance des données, à partir d'une base de données SQLite Room.
+Chaque tâche appartenant à un projet, la base de données contient actuellement 2 tables ("tâches" et "projets").
+Comme le décrit le schéma ci-dessous, l'ensemble des données est manipulable grâce aux DAO (Data Access Object). Les repositories dédiés permettent de récupérer les données des Dao, puis grâce à leurs méthodes publiques, d'afficher les données dans la MainActivity par l'intermédiaire d'un ViewModel pour chaque tâche.
+
+<img width="533" alt="Architecture ok" src="https://user-images.githubusercontent.com/78255467/173401218-ad4cac28-de55-4f5a-bc06-b3df8124d244.png">
+
 ## Tests
 
 L'application a été testée par émulation sur les appareils suivants :
@@ -119,6 +127,14 @@ This app allow you to :
 - Sort all tasks alphabetically or by date. Each sorting method can be inverted (A to Z, Z to A, old first, recent first).
 
 ![Fonctionnalités GB](https://user-images.githubusercontent.com/78255467/173393086-93a82a68-7b9c-4b84-bee1-0cb62e81501a.png)
+
+## Architecture Components & Data persistence
+
+This app adopt Architecture Components and enables data persistence, thanks to SQLite Room.
+Each task belongs to a project, so this database contains currently 2 tables ("tasks" & "projects").
+As describes the pictures below, data is accessed by DAO (Data Access Object). The two dedicated repositories provides access to Dao data, then thanks to their public methods, display data in MainActivity through a ViewModel for each task.
+
+<img width="533" alt="Architecture ok" src="https://user-images.githubusercontent.com/78255467/173401218-ad4cac28-de55-4f5a-bc06-b3df8124d244.png">
 
 ## Tests
 
