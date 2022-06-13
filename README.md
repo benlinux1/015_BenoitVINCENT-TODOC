@@ -21,7 +21,7 @@ lorsqu'ils se rendent dans les locaux à nettoyer.
 - Spécifiez un dossier de destination sur votre ordinateur et cliquez sur "clone"
 - Voici les étapes en images :
 
-![Sans titre-1](https://user-images.githubusercontent.com/78255467/170271043-21297926-a109-4c5f-bebb-09849548bfe7.png)
+![GIT OK README](https://user-images.githubusercontent.com/78255467/173385204-cf85b735-5d75-4cab-8fa1-427ee70b3240.png)
 
 L'application va ensuite se compiler dans Android Studio
 
@@ -95,7 +95,7 @@ This repository contains a mini app for the **DA Android** 5th projet, untitled 
 - Specify a destination folder name on your computer and click "clone"
 - Here are the steps to illustrate in pictures :
 
-![Sans titre-1](https://user-images.githubusercontent.com/78255467/170271169-7485e9fd-6986-4aca-82a2-237066fd9940.png)
+![GIT OK README](https://user-images.githubusercontent.com/78255467/173385204-cf85b735-5d75-4cab-8fa1-427ee70b3240.png)
 
 Next the app will compile in Android Studio
 
