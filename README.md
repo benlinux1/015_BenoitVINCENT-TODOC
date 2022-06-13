@@ -75,8 +75,8 @@ Notre équipe : BenLinux & FranckBlack
 
 ============================================================================================
 
-![da-android-maréu](https://user-images.githubusercontent.com/78255467/170271248-7bdd2842-0cda-49c6-b7db-439d372d3ee0.svg)
-![#p4-openclassrooms](https://user-images.githubusercontent.com/78255467/170271275-7d88b19f-a1f9-43a6-9445-bfd863aae503.svg)
+![da-android-todoc](https://user-images.githubusercontent.com/78255467/173360674-649d0829-c367-4908-b9e9-c8c394050a5b.svg)
+![#p5-openclassrooms](https://user-images.githubusercontent.com/78255467/173360692-faa9b034-07ad-4f4a-b9ce-54e27e8bd15c.svg)
 
 # ENGLISH VERSION
 (version française en 1ère partie de la documentation)
