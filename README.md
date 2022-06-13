@@ -44,7 +44,7 @@ Cette applcation vous permet de/d' :
 - Supprimer la/les tâches de votre choix, dans la liste générale.
 - Trier les tâches dans la liste générale, par ordre alphabétique (ou inversement) ou par date de création (chronologiquement ou de la plus récente à la plus ancienne).
 
-![Fonctionnalités FR](https://user-images.githubusercontent.com/78255467/170277591-a668bcb3-74d9-4531-94c0-267d8e36e8e7.png)
+![Fonctionnalités FR](https://user-images.githubusercontent.com/78255467/173392991-e153774d-e9ca-4953-88d4-c8ce81fc9f17.png)
 
 ## Tests
 
@@ -118,7 +118,7 @@ This app allow you to :
 - Delete a task from global list
 - Sort all tasks alphabetically or by date. Each sorting method can be inverted (A to Z, Z to A, old first, recent first).
 
-![Fonctionnalités GB](https://user-images.githubusercontent.com/78255467/170277679-27b594b3-14e9-4507-9609-08f1dfa39dcc.png)
+![Fonctionnalités GB](https://user-images.githubusercontent.com/78255467/173393086-93a82a68-7b9c-4b84-bee1-0cb62e81501a.png)
 
 ## Tests
 
