@@ -71,6 +71,7 @@ L'application a été testée par émulation sur les appareils suivants :
 
 - Nexus 9 (API 30)
 - Nexus 10 (API 30)
+- Pixel C (API 30)
 
 Elle a également été testée dans des conditions réelles, sur un smartphone physique Samsung Galaxy S20 et sur une tablette Samsung Galaxy A7.
 
@@ -155,6 +156,7 @@ This app has been tested on following devices :
 
 - Nexus 9 (API 30)
 - Nexus 10 (API 30)
+- Pixel C (API 30)
 
 It was also tested in real conditions, on a physical smartphone device Samsung Galaxy S20, and a physical tab device Samsung Galaxy A7.
 
