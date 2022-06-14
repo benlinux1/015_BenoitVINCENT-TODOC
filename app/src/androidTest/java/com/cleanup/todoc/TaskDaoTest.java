@@ -8,6 +8,7 @@ import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.cleanup.todoc.database.dao.TodocDatabase;
+import com.cleanup.todoc.model.Project;
 import com.cleanup.todoc.model.Task;
 
 import org.junit.After;
@@ -35,7 +36,6 @@ public class TaskDaoTest {
                         TodocDatabase.class)
                 .allowMainThreadQueries()
                 .build();
-
     }
 
     @After
@@ -43,34 +43,43 @@ public class TaskDaoTest {
         database.close();
     }
 
+    /**
+     * DATA SET FOR TEST (Project & Task)
+     */
+    private static final int PROJECT_ID = 1;
+    private static final Project PROJECT_DEMO = new Project(PROJECT_ID, "Pierpoljak", 0xFFe942f5);
+    private static final Task TASK_DEMO = new Task(1, "Nettoyer les vitres de la salle de réunion", 1654684380);
 
-
-    // DATA SET FOR TEST
-    private static final long TASK_ID = 5;
-    private static final Task TASK_DEMO = new Task(TASK_ID, 1, "Nettoyer les vitres de la salle de réunion", 1654684380);
-
+    /**
+     * Test that checks task insertion & data conformity in database
+     */
     @Test
     public void insertAndGetTask() throws InterruptedException {
 
-        // BEFORE : Adding a new task
+        // BEFORE : Creating a Project & adding a new task
+        this.database.projectDao().createProject(PROJECT_DEMO);
         this.database.taskDao().createTask(TASK_DEMO);
 
-        // TEST : check if task data is in the database
-        Task task = LiveDataTestUtil.getValue(this.database.taskDao().getTask(TASK_ID));
-        assertTrue(task.getName().equals(TASK_DEMO.getName()) && task.getId() == TASK_ID
+        // TEST : checks if task data is in the database
+        Task task = LiveDataTestUtil.getValue(this.database.taskDao().getTasks()).get(0);
+        assertTrue(task.getName().equals(TASK_DEMO.getName())
                 && task.getProjectId() == TASK_DEMO.getProjectId() && task.getCreationTimestamp() == TASK_DEMO.getCreationTimestamp());
 
     }
 
+    /**
+     * Test that checks task insertion & delete method in/from database
+     */
     @Test
     public void insertAndDeleteItem() throws InterruptedException {
 
-        // BEFORE : Adding demo task. Next, get the item added & delete it.
+        // BEFORE : Adding a demo project & a demo task. Next, get the item added & delete it.
+        this.database.projectDao().createProject(PROJECT_DEMO);
         this.database.taskDao().createTask(TASK_DEMO);
         Task taskAdded = LiveDataTestUtil.getValue(this.database.taskDao().getTasks()).get(0);
         this.database.taskDao().deleteTask(taskAdded.getId());
 
-        //TEST
+        //TEST : checks if task list is empty when task has been deleted
         List<Task> tasks = LiveDataTestUtil.getValue(this.database.taskDao().getTasks());
         assertTrue(tasks.isEmpty());
 

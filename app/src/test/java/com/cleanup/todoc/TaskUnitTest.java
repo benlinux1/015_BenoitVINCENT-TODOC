@@ -1,5 +1,6 @@
 package com.cleanup.todoc;
 
+import com.cleanup.todoc.model.Project;
 import com.cleanup.todoc.model.Task;
 import com.cleanup.todoc.ui.TaskViewModel;
 
@@ -26,10 +27,26 @@ public class TaskUnitTest {
         final Task task3 = new Task( 3, "task 3", new Date().getTime());
         final Task task4 = new Task( 4, "task 4", new Date().getTime());
 
-        // assertEquals("Projet Tartampion", task1.getProject().getName());
-        // assertEquals("Projet Lucidia", task2.getProject().getName());
-        // assertEquals("Projet Circus", task3.getProject().getName());
-        // assertNull(task4.getProject());
+        final Project project1 = new Project(1, "Projet Tartampion", 0xFFe942f5);
+        final Project project2 = new Project(2, "Projet Lucidia", 0xFFB4CDBA);
+        final Project project3 = new Project(3, "Projet Circus", 0xFFA3CED2);
+
+        // Test for projects name
+        assertEquals("Projet Tartampion", project1.getName());
+        assertEquals("Projet Lucidia", project2.getName());
+        assertEquals("Projet Circus", project3.getName());
+        assertNull(task4.getProject());
+
+        // Test for projects color
+        assertEquals(0xFFe942f5, project1.getColor());
+        assertEquals(0xFFB4CDBA, project2.getColor());
+        assertEquals(0xFFA3CED2, project3.getColor());
+
+        // Test for tasks project ID
+        assertEquals(1, task1.getProjectId());
+        assertEquals(2, task2.getProjectId());
+        assertEquals(3, task3.getProjectId());
+
     }
 
     @Test
