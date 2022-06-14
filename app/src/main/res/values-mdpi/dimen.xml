@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    // Task list
+    <dimen name="no_tasks_text">20sp</dimen>
+    <dimen name="tasks_list_paddingBottom">88dp</dimen>
+    <dimen name="tasks_list_margin_top">8dp</dimen>
+
+    // Dialog
+    <dimen name="dialog_padding_horizontal">16dp</dimen>
+    <dimen name="dialog_padding_vertical">12dp</dimen>
+    <dimen name="spinner_text_size">12sp</dimen>
+    <dimen name="spinner_margin_top">16dp</dimen>
+    <dimen name="spinner_padding_bottom">12dp</dimen>
+    <dimen name="bottom_line_margin_horizontal">8dp</dimen>
+
+    // Add Button
+    <dimen name="fab_size">56dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    // Project Image
+    <dimen name="project_image_size">48dp</dimen>
+    <dimen name="project_image_margin_horizontal">16dp</dimen>
+    <dimen name="project_image_margin_vertical">8dp</dimen>
+
+    // Task Name
+    <dimen name="task_name_text">14sp</dimen>
+    <dimen name="task_name_margin_top">8dp</dimen>
+
+    // Project Name
+    <dimen name="project_name_text">14sp</dimen>
+    <dimen name="project_name_margin_bottom">8dp</dimen>
+
+    // Delete image
+    <dimen name="delete_image_size">32dp</dimen>
+    <dimen name="delete_image_margin_horizontal">16dp</dimen>
+    <dimen name="delete_image_margin_vertical">8dp</dimen>
+
+</resources>
