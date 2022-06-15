@@ -19,6 +19,14 @@
                 android:title="@string/sort_alphabetical_invert"
                 app:showAsAction="never|withText" />
             <item
+                android:id="@+id/filter_alphabetical_project"
+                android:title="@string/sort_project_alphabetical"
+                app:showAsAction="never|withText" />
+            <item
+                android:id="@+id/filter_alphabetical_project_inverted"
+                android:title="@string/sort_project_alphabetical_inverted"
+                app:showAsAction="never|withText" />
+            <item
                 android:id="@+id/filter_oldest_first"
                 android:title="@string/sort_oldest_first"
                 app:showAsAction="never|withText" />

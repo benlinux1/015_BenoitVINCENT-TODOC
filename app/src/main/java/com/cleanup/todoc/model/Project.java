@@ -51,11 +51,15 @@ public class Project {
     /**
      * Returns all the projects of the application.
      * All projects are predefined when database is initialized (@see database.dao.TodocDatabase)
+     * This method is used for project ZA & AZ sorting method
      * @return all the projects of the application
      */
     @NonNull
     public static Project[] getAllProjects() {
         return new Project[]{
+                new Project( 1,"Projet Tartampion", 0xFFEADAD1),
+                new Project(2, "Projet Lucidia", 0xFFB4CDBA),
+                new Project(3, "Projet Circus", 0xFFA3CED2)
         };
     }
 

@@ -39,7 +39,6 @@ import java.util.List;
  */
 public class MainActivity extends AppCompatActivity implements TasksAdapter.DeleteTaskListener {
 
-
     /**
      * List of all current tasks of the application
      */
@@ -116,8 +115,8 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
 
         // Configure ViewModel & get tasks list
         configureViewModel();
-        getTasks();
         getProjects();
+        getTasks();
 
     }
 
@@ -135,6 +134,10 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
             sortMethod = SortMethod.ALPHABETICAL;
         } else if (id == R.id.filter_alphabetical_inverted) {
             sortMethod = SortMethod.ALPHABETICAL_INVERTED;
+        } else if (id == R.id.filter_alphabetical_project) {
+            sortMethod = SortMethod.ALPHABETICAL_PROJECT;
+        } else if (id == R.id.filter_alphabetical_project_inverted) {
+            sortMethod = SortMethod.ALPHABETICAL_PROJECT_INVERTED;
         } else if (id == R.id.filter_oldest_first) {
             sortMethod = SortMethod.OLD_FIRST;
         } else if (id == R.id.filter_recent_first) {
@@ -161,14 +164,12 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
 
 
     /**
-     * TODO : Used to get projects List stored in Database
-     * @return List<Project>
+     * Used to get projects List stored in Database
      */
     private void getProjects() {
         taskViewModel.getProjects().observe(this, this::updateProjects);
     }
     
-
 
     @Override
     public void onDeleteTask(Task task) {
@@ -260,6 +261,14 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
                 case ALPHABETICAL_INVERTED:
                     Collections.sort(tasks, new Task.TaskZAComparator());
                     break;
+                case ALPHABETICAL_PROJECT:
+                    Collections.sort(tasks, new Task.TaskAZComparator());
+                    Collections.sort(tasks, new Task.ProjectAZComparator());
+                    break;
+                case ALPHABETICAL_PROJECT_INVERTED:
+                    Collections.sort(tasks, new Task.TaskZAComparator());
+                    Collections.sort(tasks, new Task.ProjectZAComparator());
+                    break;
                 case RECENT_FIRST:
                     Collections.sort(tasks, new Task.TaskRecentComparator());
                     break;
@@ -272,11 +281,12 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
         }
     }
 
-
+    /**
+     * Updates the list of projects in the UI
+     */
     private void updateProjects(List<Project> projects){
         adapter.updateProjects(projects);
     }
-
 
 
     /**
@@ -355,6 +365,14 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
          * Inverted sort alphabetical by name
          */
         ALPHABETICAL_INVERTED,
+        /**
+         * Sort alphabetical by project name
+         */
+        ALPHABETICAL_PROJECT,
+        /**
+         * Inverted sort alphabetical by project name
+         */
+        ALPHABETICAL_PROJECT_INVERTED,
         /**
          * Lastly created first
          */

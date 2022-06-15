@@ -179,6 +179,27 @@ public class Task {
     }
 
     /**
+     * Comparator to sort projects from A to Z
+     */
+    public static class ProjectAZComparator implements Comparator<Task> {
+        @Override
+        public int compare(Task left, Task right) {
+            return left.getProject().getName().compareTo(right.getProject().getName());
+        }
+    }
+
+    /**
+     * Comparator to sort projects from Z to A
+     */
+    public static class ProjectZAComparator implements Comparator<Task> {
+        @Override
+        public int compare(Task left, Task right) {
+            return right.getProject().getName().compareTo(left.getProject().getName());
+        }
+    }
+
+
+    /**
      * Comparator to sort task from last created to first created
      */
     public static class TaskRecentComparator implements Comparator<Task> {

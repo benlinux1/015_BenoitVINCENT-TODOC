@@ -40,10 +40,7 @@ public class TaskViewModel extends ViewModel {
 
     }
 
-    // -------------
-    // / GET PROJECTS LIST
-    // -------------
-
+    // GET PROJECTS LIST
     public LiveData<List<Project>> getProjects() {
         return projectDataSource.getProjects();
     }
@@ -55,11 +52,11 @@ public class TaskViewModel extends ViewModel {
     }
 
 
-
     // GET A GIVEN PROJECT BY ID
     public LiveData<Project> getProject(long id) {
         return projectDataSource.getProject(id);
     }
+
 
     // CREATE A NEW TASK
     public void createTask(Task task) {
