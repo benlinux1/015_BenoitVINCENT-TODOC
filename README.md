@@ -13,11 +13,11 @@ Ce dépôt contient une mini-application, intitulée **Todoc** réalisée pour *
 L'application ici développée permet ainsi aux collaborateurs de l'entreprise d'obtenir une vision précise des tâches à accomplir, 
 lorsqu'ils se rendent dans les locaux à nettoyer.
 
-L'architecture MVVM implémentée inclut une persistence des données dans l'appareil de l'utilisateur.
+L'**architecture MVVM** implémentée inclut une **persistence des données** dans l'appareil de l'utilisateur.
 
 
 ## Technologies
-- 100% JAVA, ce projet a été réalisé à partir de l'IDE Android Studio.
+- **100% JAVA**, ce projet a été réalisé à partir de l'IDE Android Studio.
 
 
 ## Fonctionnalités
@@ -114,11 +114,11 @@ This repository contains a mini app, untitled **Todoc**, created for ***Cleanup*
 
 This app allows company's team members to get a global vision of their missions when they go to the offices to be cleaned.
 
-The implemented MVVM architecture includes data persistence in user's device.
+The implemented **MVVM architecture** includes **data persistence** in user's device.
 
 
 ## Technologies
-- 100% JAVA, this project was made with Android Studio IDE.
+- **100% JAVA**, this project was made with Android Studio IDE.
 
 
 ## Features
