@@ -6,8 +6,10 @@
 
 # Todoc
 
-Ce dépôt contient une mini-application pour le P5 du parcours **DA ANDROID**, intitulée **Todoc**, réalisée pour *Cleanup*,  
-entreprise de nettoyage de locaux commerciaux.
+## Objectifs
+
+Ce dépôt contient une mini-application réalisée pour *Cleanup*, une entreprise de nettoyage de locaux commerciaux.
+
 L'application ici développée permet ainsi aux collaborateurs de l'entreprise d'obtenir une vision précise des tâches à accomplir, 
 lorsqu'ils se rendent dans les locaux à nettoyer.
 
