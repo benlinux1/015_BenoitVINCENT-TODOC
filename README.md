@@ -70,7 +70,7 @@ Elle a également été testée dans des conditions réelles, sur un smartphone 
 ## Installation
 - Ouvrez votre IDE préféré (ici Android Studio)
 - Ouvrez un nouveau projet et choississez "Get From Version Control"
-- Clonez l'application en copiant / collant ce lien : https://github.com/benlinux1/DA_ANDROID_TODOC
+- Clonez l'application en copiant / collant ce lien : https://github.com/benlinux1/015_BenoitVINCENT-TODOC.git
 - Spécifiez un dossier de destination sur votre ordinateur et cliquez sur "clone"
 - Voici les étapes en images :
 
@@ -171,7 +171,7 @@ It was also tested in real conditions, on a physical smartphone device Samsung G
 ## Install
 - Open your favorite IDE (here Android Studio)
 - Open a new project and choose "Get From Version Control" option
-- Clone the app by copying / pasting this repository link : https://github.com/benlinux1/DA_ANDROID_TODOC.git
+- Clone the app by copying / pasting this repository link : https://github.com/benlinux1/015_BenoitVINCENT-TODOC.git
 - Specify a destination folder name on your computer and click "clone"
 - Here are the steps to illustrate in pictures :
 
