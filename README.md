@@ -35,7 +35,9 @@ Cette applcation vous permet de/d' :
 ## Architecture Components & persistence des données
 
 L'application adopte l'Architecture Components et gère la persistance des données, à partir d'une base de données SQLite Room.
+
 Chaque tâche appartenant à un projet, la base de données contient actuellement 2 tables ("tâches" et "projets").
+
 Comme le décrit le schéma ci-dessous, l'ensemble des données est manipulable grâce aux DAO (Data Access Object). Les repositories dédiés permettent de récupérer les données des Dao, puis grâce à leurs méthodes publiques, d'afficher les données dans la MainActivity par l'intermédiaire d'un ViewModel pour chaque tâche.
 
 <p align="center">
@@ -132,7 +134,9 @@ This app allow you to :
 ## Architecture Components & Data persistence
 
 This app adopt Architecture Components and provides data persistence, thanks to SQLite Room.
+
 Each task belongs to a project, so this database contains currently 2 tables ("tasks" & "projects").
+
 As describes the picture below, data is accessed by DAO (Data Access Object). The two dedicated repositories provides access to Dao data, then thanks to their public methods, display data in MainActivity through a ViewModel for each task.
 
 <p align="center">
