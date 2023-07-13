@@ -1,5 +1,4 @@
-![da-android-todoc](https://user-images.githubusercontent.com/78255467/173357715-1ad86980-02b2-422b-bbbc-eb0f2675eff9.svg)
-![#p5-openclassrooms](https://user-images.githubusercontent.com/78255467/173357720-3ac4bc43-6870-4232-a035-de1ba8df577b.svg)
+![benoit-vincent-todoc](https://github.com/benlinux1/015_BenoitVINCENT-TODOC/assets/78255467/ca2a3ad7-d3ad-4702-a000-dc442f8dee76)![android-100_-java](https://github.com/benlinux1/015_BenoitVINCENT-TODOC/assets/78255467/15b7244c-edd6-42d9-b451-afe5e7c02dfb)
 
 # VERSION FRANCAISE
 (English translation in the 2nd part of the documentation below)
@@ -100,8 +99,7 @@ Notre équipe : BenLinux & FranckBlack
 
 ============================================================================================
 
-![da-android-todoc](https://user-images.githubusercontent.com/78255467/173360674-649d0829-c367-4908-b9e9-c8c394050a5b.svg)
-![#p5-openclassrooms](https://user-images.githubusercontent.com/78255467/173360692-faa9b034-07ad-4f4a-b9ce-54e27e8bd15c.svg)
+![benoit-vincent-todoc](https://github.com/benlinux1/015_BenoitVINCENT-TODOC/assets/78255467/ca2a3ad7-d3ad-4702-a000-dc442f8dee76)![android-100_-java](https://github.com/benlinux1/015_BenoitVINCENT-TODOC/assets/78255467/15b7244c-edd6-42d9-b451-afe5e7c02dfb)
 
 # ENGLISH VERSION
 (version française en 1ère partie de la documentation)
