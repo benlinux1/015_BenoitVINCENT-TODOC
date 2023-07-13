@@ -11,29 +11,10 @@ entreprise de nettoyage de locaux commerciaux.
 L'application ici développée permet ainsi aux collaborateurs de l'entreprise d'obtenir une vision précise des tâches à accomplir, 
 lorsqu'ils se rendent dans les locaux à nettoyer.
 
+
 ## Technologies
 - 100% JAVA, ce projet a été réalisé à partir de l'IDE Android Studio.
 
-## Installation
-- Ouvrez votre IDE préféré (ici Android Studio)
-- Ouvrez un nouveau projet et choississez "Get From Version Control"
-- Clonez l'application en copiant / collant ce lien : https://github.com/benlinux1/DA_ANDROID_TODOC
-- Spécifiez un dossier de destination sur votre ordinateur et cliquez sur "clone"
-- Voici les étapes en images :
-
-![GIT OK README](https://user-images.githubusercontent.com/78255467/173385204-cf85b735-5d75-4cab-8fa1-427ee70b3240.png)
-
-L'application va ensuite se compiler dans Android Studio
-
-## Utilisation / Lancement de l'application
-
-Vous pouvez utiliser cette application via un émulateur, pour une simulation sur le mobile de votre choix.
-Pour ce faire, rendez-vous dans le ruban à droite de la fenêtre puis "create device" et laissez-vous guider.
-
-Vous pouvez également utiliser cette application sur votre smartphone personnel en choississant l'option "physical"
-Ensuite, lancez l'application en cliquant sur le bouton triangulaire "Run", comme ci-dessous :
-
-![Sans titre-2](https://user-images.githubusercontent.com/78255467/163193524-89842086-ca39-475c-afc2-e39e3e586f68.png)
 
 ## Fonctionnalités
 
@@ -46,6 +27,7 @@ Cette applcation vous permet de/d' :
 
 ![Fonctionnalités FR](https://user-images.githubusercontent.com/78255467/173392991-e153774d-e9ca-4953-88d4-c8ce81fc9f17.png)
 
+
 ## Architecture Components & persistence des données
 
 L'application adopte l'Architecture Components et gère la persistance des données, à partir d'une base de données SQLite Room.
@@ -55,6 +37,7 @@ Comme le décrit le schéma ci-dessous, l'ensemble des données est manipulable 
 <p align="center">
   <img width="533" alt="Architecture ok" src="https://user-images.githubusercontent.com/78255467/173401218-ad4cac28-de55-4f5a-bc06-b3df8124d244.png">
 </p>
+
 
 ## Tests
 
@@ -74,6 +57,29 @@ L'application a été testée par émulation sur les appareils suivants :
 - Pixel C (API 30)
 
 Elle a également été testée dans des conditions réelles, sur un smartphone physique Samsung Galaxy S20 et sur une tablette Samsung Galaxy A7.
+
+
+## Installation
+- Ouvrez votre IDE préféré (ici Android Studio)
+- Ouvrez un nouveau projet et choississez "Get From Version Control"
+- Clonez l'application en copiant / collant ce lien : https://github.com/benlinux1/DA_ANDROID_TODOC
+- Spécifiez un dossier de destination sur votre ordinateur et cliquez sur "clone"
+- Voici les étapes en images :
+
+![GIT OK README](https://user-images.githubusercontent.com/78255467/173385204-cf85b735-5d75-4cab-8fa1-427ee70b3240.png)
+
+L'application va ensuite se compiler dans Android Studio
+
+
+## Utilisation / Lancement de l'application
+
+Vous pouvez utiliser cette application via un émulateur, pour une simulation sur le mobile de votre choix.
+Pour ce faire, rendez-vous dans le ruban à droite de la fenêtre puis "create device" et laissez-vous guider.
+
+Vous pouvez également utiliser cette application sur votre smartphone personnel en choississant l'option "physical"
+Ensuite, lancez l'application en cliquant sur le bouton triangulaire "Run", comme ci-dessous :
+
+![Sans titre-2](https://user-images.githubusercontent.com/78255467/163193524-89842086-ca39-475c-afc2-e39e3e586f68.png)
 
 ## Contribuez au projet
 
@@ -99,6 +105,50 @@ This repository contains a mini app for the **DA Android** 5th projet, untitled 
 ## Technologies
 - 100% JAVA, this project was made with Android Studio IDE.
 
+
+## Features
+
+This app allow you to :
+
+- Display global tasks list
+- Add a new task, after you hav assigned it to one of three existing projects.
+- Delete a task from global list
+- Sort all tasks alphabetically or by date. Each sorting method can be inverted (A to Z, Z to A, old first, recent first).
+
+![Fonctionnalités GB](https://user-images.githubusercontent.com/78255467/173393086-93a82a68-7b9c-4b84-bee1-0cb62e81501a.png)
+
+
+## Architecture Components & Data persistence
+
+This app adopt Architecture Components and provides data persistence, thanks to SQLite Room.
+Each task belongs to a project, so this database contains currently 2 tables ("tasks" & "projects").
+As describes the picture below, data is accessed by DAO (Data Access Object). The two dedicated repositories provides access to Dao data, then thanks to their public methods, display data in MainActivity through a ViewModel for each task.
+
+<p align="center">
+  <img width="533" alt="Architecture ok" src="https://user-images.githubusercontent.com/78255467/173401218-ad4cac28-de55-4f5a-bc06-b3df8124d244.png">
+</p>
+
+
+## Tests
+
+This app has been tested on following devices :
+
+**Smartphones** :
+
+- Pixel 3XL (API 30)
+- Pixel 5 (API 30)
+- Nexus 6 (API 30)
+- Nexus S (API 30)
+
+**Tabs** :
+
+- Nexus 9 (API 30)
+- Nexus 10 (API 30)
+- Pixel C (API 30)
+
+It was also tested in real conditions, on a physical smartphone device Samsung Galaxy S20, and a physical tab device Samsung Galaxy A7.
+
+
 ## Install
 - Open your favorite IDE (here Android Studio)
 - Open a new project and choose "Get From Version Control" option
@@ -120,49 +170,11 @@ Then, launch app clicking on the green triangle button "Run", like in this examp
 
 ![Sans titre-2](https://user-images.githubusercontent.com/78255467/163193524-89842086-ca39-475c-afc2-e39e3e586f68.png)
 
-## Features
-
-This app allow you to :
-
-- Display global tasks list
-- Add a new task, after you hav assigned it to one of three existing projects.
-- Delete a task from global list
-- Sort all tasks alphabetically or by date. Each sorting method can be inverted (A to Z, Z to A, old first, recent first).
-
-![Fonctionnalités GB](https://user-images.githubusercontent.com/78255467/173393086-93a82a68-7b9c-4b84-bee1-0cb62e81501a.png)
-
-## Architecture Components & Data persistence
-
-This app adopt Architecture Components and provides data persistence, thanks to SQLite Room.
-Each task belongs to a project, so this database contains currently 2 tables ("tasks" & "projects").
-As describes the picture below, data is accessed by DAO (Data Access Object). The two dedicated repositories provides access to Dao data, then thanks to their public methods, display data in MainActivity through a ViewModel for each task.
-
-<p align="center">
-  <img width="533" alt="Architecture ok" src="https://user-images.githubusercontent.com/78255467/173401218-ad4cac28-de55-4f5a-bc06-b3df8124d244.png">
-</p>
-
-## Tests
-
-This app has been tested on following devices :
-
-**Smartphones** :
-
-- Pixel 3XL (API 30)
-- Pixel 5 (API 30)
-- Nexus 6 (API 30)
-- Nexus S (API 30)
-
-**Tabs** :
-
-- Nexus 9 (API 30)
-- Nexus 10 (API 30)
-- Pixel C (API 30)
-
-It was also tested in real conditions, on a physical smartphone device Samsung Galaxy S20, and a physical tab device Samsung Galaxy A7.
 
 ## Contribute to the project
 
 Todoc is an open source project. Feel free to fork the source and contribute with your own features.
+
 
 ## Authors
 
