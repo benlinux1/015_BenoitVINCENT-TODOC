@@ -1,4 +1,5 @@
-![benoit-vincent-todoc](https://github.com/benlinux1/015_BenoitVINCENT-TODOC/assets/78255467/ca2a3ad7-d3ad-4702-a000-dc442f8dee76)![android-100_-java](https://github.com/benlinux1/015_BenoitVINCENT-TODOC/assets/78255467/15b7244c-edd6-42d9-b451-afe5e7c02dfb)
+![benoit-vincent-todoc](https://github.com/benlinux1/015_BenoitVINCENT-TODOC/assets/78255467/ca2a3ad7-d3ad-4702-a000-dc442f8dee76)![android-app-100_-java](https://github.com/benlinux1/015_BenoitVINCENT-TODOC/assets/78255467/dd28dcc9-02df-45e5-8a0d-9a6d8f551b83)
+
 
 # VERSION FRANCAISE
 (English translation in the 2nd part of the documentation below)
@@ -99,7 +100,7 @@ Notre équipe : BenLinux & FranckBlack
 
 ============================================================================================
 
-![benoit-vincent-todoc](https://github.com/benlinux1/015_BenoitVINCENT-TODOC/assets/78255467/ca2a3ad7-d3ad-4702-a000-dc442f8dee76)![android-100_-java](https://github.com/benlinux1/015_BenoitVINCENT-TODOC/assets/78255467/15b7244c-edd6-42d9-b451-afe5e7c02dfb)
+![benoit-vincent-todoc](https://github.com/benlinux1/015_BenoitVINCENT-TODOC/assets/78255467/ca2a3ad7-d3ad-4702-a000-dc442f8dee76)![android-app-100_-java](https://github.com/benlinux1/015_BenoitVINCENT-TODOC/assets/78255467/dd28dcc9-02df-45e5-8a0d-9a6d8f551b83)
 
 # ENGLISH VERSION
 (version française en 1ère partie de la documentation)
