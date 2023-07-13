@@ -8,7 +8,7 @@
 
 ## Objectifs
 
-Ce dépôt contient une mini-application, intitulée ***Todoc*** réalisée pour **Cleanup**, une entreprise de nettoyage de locaux commerciaux.
+Ce dépôt contient une mini-application, intitulée **Todoc** réalisée pour ***Cleanup***, une entreprise de nettoyage de locaux commerciaux.
 
 L'application ici développée permet ainsi aux collaborateurs de l'entreprise d'obtenir une vision précise des tâches à accomplir, 
 lorsqu'ils se rendent dans les locaux à nettoyer.
@@ -104,7 +104,9 @@ Notre équipe : BenLinux & FranckBlack
 
 # Todoc
 
-This repository contains a mini app, untitled **Todoc**, created for *Cleanup*, a cleaning company in commercial or office spaces.
+## Objectives
+
+This repository contains a mini app, untitled **Todoc**, created for ***Cleanup***, a cleaning company in commercial or office spaces.
 
 This app allows company's team members to get a global vision of their missions when they go to the offices to be cleaned.
 
