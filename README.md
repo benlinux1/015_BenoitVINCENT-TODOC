@@ -38,7 +38,9 @@ L'application adopte l'Architecture Components et gère la persistance des donn�
 
 Chaque tâche appartenant à un projet, la base de données contient actuellement 2 tables ("tâches" et "projets").
 
-Comme le décrit le schéma ci-dessous, l'ensemble des données est manipulable grâce aux DAO (Data Access Object). Les repositories dédiés permettent de récupérer les données des Dao, puis grâce à leurs méthodes publiques, d'afficher les données dans la MainActivity par l'intermédiaire d'un ViewModel pour chaque tâche.
+Comme le décrit le schéma ci-dessous, l'ensemble des données est manipulable grâce aux DAO (Data Access Object).
+
+Les repositories dédiés permettent de récupérer les données des Dao, puis grâce à leurs méthodes publiques, d'afficher les données dans la MainActivity par l'intermédiaire d'un ViewModel pour chaque tâche.
 
 <p align="center">
   <img width="533" alt="Architecture ok" src="https://user-images.githubusercontent.com/78255467/173401218-ad4cac28-de55-4f5a-bc06-b3df8124d244.png">
@@ -137,7 +139,9 @@ This app adopt Architecture Components and provides data persistence, thanks to 
 
 Each task belongs to a project, so this database contains currently 2 tables ("tasks" & "projects").
 
-As describes the picture below, data is accessed by DAO (Data Access Object). The two dedicated repositories provides access to Dao data, then thanks to their public methods, display data in MainActivity through a ViewModel for each task.
+As describes the picture below, data is accessed by DAO (Data Access Object). 
+
+The two dedicated repositories provides access to Dao data, then thanks to their public methods, display data in MainActivity through a ViewModel for each task.
 
 <p align="center">
   <img width="533" alt="Architecture ok" src="https://user-images.githubusercontent.com/78255467/173401218-ad4cac28-de55-4f5a-bc06-b3df8124d244.png">
